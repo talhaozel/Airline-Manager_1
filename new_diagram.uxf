@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>54</y>
+      <w>264</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>::Flight
+--
+-id: String
+-departure: String
+-arrival: String
+-plane: String
+--
++Flight(): ctor
++Flight(String id, String departure, String arrival, String plane): ctor
++getDeparture(): String
++setDeparture(String departure): void
++getArrival(): String
++setArrival(String arrival): void
++getPlane(): String
++setPlane(String plane): void
++getId(): String
++setId(String id): void
++sendMessage(): String
++added(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>48</y>
+      <w>252</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>::Personel
+--
+-id: String
+-isim: String
+-soyad: String
+-gorev: String
+--
++Personel(): ctor
++Personel(String id, String isim, String soyad, String gorev): ctor
++getId(): String
++setId(String id): void
++getIsim(): String
++setIsim(String isim): void
++getSoyad(): String
++setSoyad(String soyad): void
++getGorev(): String
++setGorev(String gorev): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>846</x>
+      <y>228</y>
+      <w>180</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>::AddPersonel
+--
+~id = new JTextField(): JTextField
+~name = new JTextField(): JTextField
+~surname = new JTextField(): JTextField
+~job = new JTextField(): JTextField
+~b1 = new JButton("ADD personel"): JButton
+~lb = new JLabel(): JLabel
+~lbid = new JLabel("Personel ID"): JLabel
+~isim = new JLabel("Enter name"): JLabel
+~soy = new JLabel("Enter surname"): JLabel
+~is = new JLabel("Departman"): JLabel
+--
++AddPersonel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>330</y>
+      <w>246</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>::RemoveFlight
+--
+~fno = new JTextField(): JTextField
+~b1 = new JButton("REMOVE Flight"): JButton
+~lb = new JLabel(): JLabel
+~lb2 = new JLabel("Please Enter The Flight Number"): JLabel
+~lb3 = new JLabel(): JLabel
+~FlightList = new ArrayList&lt;String&gt;(): ArrayList&lt;String&gt;
+~logo = new ImageIcon("images/TA.png"): ImageIcon
+~logom = new JLabel(logo): JLabel
+--
++RemoveFlight(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>462</y>
+      <w>294</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>::FindFlight
+--
+~fno = new JTextField(): JTextField
+~b1 = new JButton("find Flight"): JButton
+~lb2 = new JLabel(): JLabel
+~lb4 = new JLabel("Enter The Flight ID  Which You Want To Find "): JLabel
+~l1 = new DefaultListModel(): DefaultListModel&lt;String&gt;
+~list = new JList(l1): JList&lt;String&gt;
+~FlightList = new ArrayList&lt;String&gt;(): ArrayList&lt;String&gt;
+--
++FindFlight(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>432</y>
+      <w>294</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>::FindPersonel
+--
+~name = new JTextField(): JTextField
+~b1 = new JButton("find personel"): JButton
+~lb = new JLabel(): JLabel
+~lb2 = new JLabel(): JLabel
+~l1 = new DefaultListModel(): DefaultListModel&lt;String&gt;
+~list = new JList(l1): JList&lt;String&gt;
+~yazi = new JLabel("Enter the personel ID which you want to find "): JLabel
+--
++FindPersonel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>312</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>::RemovePersonel
+--
+~id = new JTextField(): JTextField
+~b1 = new JButton("REMOVE personel"): JButton
+~lb = new JLabel(): JLabel
+~sil = new JLabel("Enter ID for the remove"): JLabel
+~Personellistesi = new ArrayList&lt;String&gt;(): ArrayList&lt;String&gt;
+--
++RemovePersonel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>354</y>
+      <w>138</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>::AllFlight
+--
+~table: JTable
+~pane: JScrollPane
+~tableModel: DefaultTableModel
+--
++AllFlight(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>438</y>
+      <w>138</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>::AllPersonel
+--
+~table: JTable
+~pane: JScrollPane
+~tableModel: DefaultTableModel
+--
++AllPersonel(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>252</y>
+      <w>102</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+::Message
+--
+--
+~sendMessage(): String
+~added(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>258</y>
+      <w>78</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>::AddFlight
+--
+--
++AddFlight(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>60</y>
+      <w>108</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>::Menu
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>606</x>
+      <y>198</y>
+      <w>78</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>::PersonelYonett
+--
+--
++Frame(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>198</y>
+      <w>60</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>::UcusYonet
+--
+--
++Frame(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>84</y>
+      <w>84</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>96</y>
+      <w>72</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>186</y>
+      <w>72</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>678</x>
+      <y>210</y>
+      <w>192</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;10.0;300.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>654</x>
+      <y>240</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>222</y>
+      <w>96</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0;10.0;370.0;80.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>234</y>
+      <w>162</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0;250.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>162</y>
+      <w>42</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;180.0;10.0;180.0;10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1176</x>
+      <y>132</y>
+      <w>114</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>174</y>
+      <w>84</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;190.0;120.0;190.0;120.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>234</y>
+      <w>18</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>234</y>
+      <w>192</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>300.0;10.0;300.0;170.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>234</y>
+      <w>96</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;480.0;10.0;480.0</additional_attributes>
+  </element>
+</diagram>
